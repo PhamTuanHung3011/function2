@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<label > <input id="input1" size="20" placeholder="nhap chuoi"></label>
+<button type="button" onclick="addNumber ()"> Add</button>
+<button type="button" onclick="changeReverser()"> Reverser </button>
+<div id="hienthi1"></div>
+<script>
+
+
+    let array = [];
+    let number =0 ;
+     function addNumber (){
+         number= document.getElementById('input1').value;
+         array.push(number);
+     }
+    function changeReverser(){
+        for (let i = array.length-1; i > (array.length-1)/2;i--){
+            let temp;
+            temp = array[array.length-i-1]
+            array[array.length-i-1] = array[i];
+            array[i]= temp;
+            // document.getElementById('hienthi1').innerHTML=array;
+        }
+        console.log(array);
+    }
+
+
+</script>
+
+
+</body>
+</html>
